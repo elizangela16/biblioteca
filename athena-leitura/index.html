@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Athena Leitura: descubra histórias, explore livros e amplie seus conhecimentos.">
+    <title>Athena Leitura | Sua biblioteca digital</title>
+
+    <!-- Fonte e ícones do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabeçalho e navegação principal -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="#inicio" class="logo" aria-label="Athena Leitura - página inicial">
+                <img src="assets/logo-athena.png" alt="Símbolo e nome da marca Athena Leitura">
+            </a>
+
+            <nav aria-label="Navegação principal">
+                <ul class="nav">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#vantagens">Explorar</a></li>
+                    <li><a href="#vantagens">Categorias</a></li>
+                    <li><a href="#vantagens">Minha biblioteca</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                </ul>
+            </nav>
+
+            <div class="actions">
+                <a href="#entrar" class="btn btn-secundario">Entrar</a>
+                <a href="#cadastro" class="btn btn-primario">Cadastrar</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal da página -->
+    <main>
+        <!-- Hero: primeira apresentação da plataforma -->
+        <section class="hero" id="inicio" aria-labelledby="titulo-hero">
+            <div class="hero-conteudo">
+                <span class="etiqueta">SUA BIBLIOTECA DIGITAL</span>
+                <h1 id="titulo-hero">Descubra o poder da <span>leitura</span></h1>
+                <p class="hero-descricao">
+                    Explore histórias, aprenda algo novo e mergulhe em um mundo de conhecimento.
+                    Encontre sua próxima leitura na Athena.
+                </p>
+
+                <div class="hero-botoes">
+                    <a href="#cadastro" class="btn btn-primario btn-grande">Comece agora</a>
+                    <a href="#vantagens" class="btn btn-secundario btn-grande">Saiba mais</a>
+                </div>
+
+                <!-- Vantagens da plataforma com ícones do Google Material Symbols -->
+                <ul class="hero-vantagens">
+                    <li>
+                        <span class="material-symbols-outlined" aria-hidden="true">menu_book</span>
+                        <span>Biblioteca com diversos livros</span>
+                    </li>
+                    <li>
+                        <span class="material-symbols-outlined" aria-hidden="true">devices</span>
+                        <span>Leia em diferentes dispositivos</span>
+                    </li>
+                    <li>
+                        <span class="material-symbols-outlined" aria-hidden="true">bookmark</span>
+                        <span>Organize suas leituras</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="hero-imagem">
+                <img src="assets/hero-athena.png" alt="Ilustração da figura de Athena atrás de livros, representando conhecimento e leitura">
+            </div>
+        </section>
+
+        <!-- Seção complementar com os benefícios da Athena -->
+        <section class="vantagens" id="vantagens" aria-labelledby="titulo-vantagens">
+            <h2 id="titulo-vantagens">Por que escolher a <span>Athena</span>?</h2>
+            <div class="vantagens-lista">
+                <article class="vantagem-card">
+                    <span class="material-symbols-outlined" aria-hidden="true">auto_stories</span>
+                    <h3>Biblioteca completa</h3>
+                    <p>Encontre diferentes histórias e conteúdos em um só lugar.</p>
+                </article>
+                <article class="vantagem-card">
+                    <span class="material-symbols-outlined" aria-hidden="true">bolt</span>
+                    <h3>Leitura prática</h3>
+                    <p>Acesse sua biblioteca de maneira simples e organizada.</p>
+                </article>
+                <article class="vantagem-card">
+                    <span class="material-symbols-outlined" aria-hidden="true">favorite</span>
+                    <h3>Feita para leitores</h3>
+                    <p>Uma experiência pensada para quem ama descobrir novos livros.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="sobre" id="sobre">
+            <p>“A leitura transforma, e a Athena acompanha você nessa jornada.”</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Athena Leitura. Projeto acadêmico.</p>
+    </footer>
+</body>
+</html>

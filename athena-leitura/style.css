@@ -1,0 +1,329 @@
+/* Cores e configurações principais do projeto */
+:root {
+    --cor-fundo: #080608;
+    --cor-superficie: #180b10;
+    --cor-bordo: #8b001f;
+    --cor-vermelho: #c0183d;
+    --cor-vermelho-hover: #e0244e;
+    --cor-texto: #ffffff;
+    --cor-texto-secundario: #c8bdc1;
+    --cor-borda: #4c1425;
+}
+
+/* Remove os espaçamentos padrões e facilita o cálculo dos tamanhos */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: "Inter", Arial, sans-serif;
+    line-height: 1.5;
+}
+
+/* Cabeçalho */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--cor-fundo);
+    border-bottom: 1px solid var(--cor-bordo);
+}
+
+.header-inner {
+    width: min(1200px, 92%);
+    min-height: 92px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+}
+
+.logo img {
+    display: block;
+    width: 190px;
+    height: auto;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    list-style: none;
+}
+
+.nav a {
+    color: var(--cor-texto-secundario);
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nav a:hover {
+    color: var(--cor-vermelho-hover);
+}
+
+.actions,
+.hero-botoes {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Estilo base compartilhado pelos links que funcionam como botões */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 18px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    color: var(--cor-texto);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primario {
+    background-color: var(--cor-bordo);
+    border-color: var(--cor-bordo);
+}
+
+.btn-primario:hover {
+    background-color: var(--cor-vermelho-hover);
+    border-color: var(--cor-vermelho-hover);
+}
+
+.btn-secundario {
+    background-color: transparent;
+    border-color: var(--cor-vermelho);
+}
+
+.btn-secundario:hover {
+    background-color: var(--cor-bordo);
+}
+
+.btn-grande {
+    min-width: 150px;
+    padding: 14px 24px;
+    font-size: 15px;
+}
+
+/* Hero: duas colunas organizadas com Grid */
+.hero {
+    width: min(1200px, 92%);
+    min-height: 570px;
+    margin: 0 auto;
+    padding: 64px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 48px;
+}
+
+.hero-conteudo {
+    max-width: 590px;
+}
+
+.etiqueta {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 7px 15px;
+    border: 1px solid var(--cor-vermelho);
+    border-radius: 999px;
+    color: var(--cor-vermelho-hover);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.hero h1 {
+    margin-bottom: 18px;
+    font-size: clamp(2.5rem, 5vw, 4.4rem);
+    font-weight: 800;
+    line-height: 1.08;
+    text-transform: uppercase;
+}
+
+.hero h1 span,
+.vantagens h2 span {
+    color: var(--cor-vermelho);
+}
+
+.hero-descricao {
+    max-width: 540px;
+    margin-bottom: 28px;
+    color: var(--cor-texto-secundario);
+    font-size: 17px;
+}
+
+.hero-botoes {
+    flex-wrap: wrap;
+    margin-bottom: 34px;
+}
+
+.hero-vantagens {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px 24px;
+    list-style: none;
+}
+
+.hero-vantagens li {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    max-width: 175px;
+    color: var(--cor-texto-secundario);
+    font-size: 13px;
+}
+
+.hero-vantagens .material-symbols-outlined {
+    color: var(--cor-vermelho-hover);
+    font-size: 28px;
+}
+
+.hero-imagem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-imagem img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+    object-fit: cover;
+}
+
+/* Benefícios apresentados abaixo do Hero */
+.vantagens {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+    padding: 35px 0 65px;
+}
+
+.vantagens h2 {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: clamp(1.7rem, 3vw, 2.3rem);
+}
+
+.vantagens-lista {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.vantagem-card {
+    padding: 28px 22px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 16px;
+    background: var(--cor-superficie);
+    text-align: center;
+}
+
+.vantagem-card .material-symbols-outlined {
+    margin-bottom: 10px;
+    color: var(--cor-vermelho-hover);
+    font-size: 38px;
+}
+
+.vantagem-card h3 {
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.vantagem-card p {
+    color: var(--cor-texto-secundario);
+    font-size: 14px;
+}
+
+.sobre {
+    width: min(1200px, 92%);
+    margin: 0 auto 45px;
+    padding: 24px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 18px;
+    background: linear-gradient(100deg, #26000d, #10070b);
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.footer {
+    padding: 22px;
+    border-top: 1px solid var(--cor-borda);
+    color: var(--cor-texto-secundario);
+    text-align: center;
+    font-size: 12px;
+}
+
+/* Ajustes para tablets e celulares */
+@media (max-width: 900px) {
+    .header-inner {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 16px 0;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 45px 0;
+    }
+
+    .hero-conteudo {
+        max-width: 100%;
+    }
+
+    .hero-imagem img {
+        max-width: 620px;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo img {
+        width: 155px;
+    }
+
+    .nav {
+        gap: 12px 18px;
+    }
+
+    .actions {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: auto;
+    }
+
+    .hero-vantagens {
+        flex-direction: column;
+    }
+
+    .vantagens-lista {
+        grid-template-columns: 1fr;
+    }
+}
